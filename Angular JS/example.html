@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="firstName='John';quantity=1;cost=5;person={name:'Aman',class:10};points=[1,2,3,4,5]">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+  <br>
+  <p>The name is <span ng-bind="firstName"></span></p>
+   <br>
+   <p>My first expression: {{ 5 + 5 }}</p>
+
+	First Name: <input type="text" ng-model="firstName"><br>
+	Last Name: <input type="text" ng-model="lastName"><br>
+	<br>
+	Full Name: {{firstName + " " + lastName}}
+	<br>
+	<p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+	<br>
+	<p>The name is <span ng-bind="person.name"></span></p>
+	<br>
+	<p>The third result is {{ points[2] }}</p>
+</div>n
+</body>
+</html> 

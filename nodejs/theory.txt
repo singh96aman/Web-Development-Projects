@@ -1,0 +1,15 @@
+Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
+
+Consider a scenario where we request a backend database for the details of user1 and user2 and then print them on the screen/console. The response to this request takes time, but both of the user data requests can be carried out independently and at the same time using node js.
+
+V8 is an open source runtime engine written in C++.
+
+JavaScript -> V8(C++) -> Machine Code
+
+V8 implements a script called ECMAScript as specified in ECMA-262. ECMAScript was created by Ecma International to standardize JavaScript.
+
+V8 can run standalone or can be embedded into any C++ application. It has hooks that allow you to write your own C++ code that you can make available to JavaScript.
+
+This essentially lets you add features to JavaScript by embedding V8 into your C++ code so that your C++ code understands more than what the ECMAScript standard otherwise specifies.
+
+MongoDB is an open source database that uses a document-oriented data model and a non-structured query language. It is one of the most powerful NoSQL systems and databases around today. Being a NoSQL tool means it does not use the usual rows and columns that we so much associate with the relational database management. It is an architecture that is built on collections and documents. The basic unit of data in this database consists of a set of key-value pairs.

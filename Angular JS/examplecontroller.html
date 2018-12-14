@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<p>Type a letter in the input field:</p>
+
+<p><input type="text" ng-model="test"></p>
+
+<ul>
+  <li ng-repeat="x in names | filter:test">
+    {{ x.name }}
+  </li>
+</ul>
+
+<br>
+<table border="1" width="100%">
+<tr>
+<th>No</th>
+<th ng-click="orderByMe('name')">Name</th>
+<th ng-click="orderByMe('country')">Country</th>
+</tr>
+<tr ng-repeat="x in names | orderBy:myOrderBy">
+<td>{{$index+1}}</td>
+<td>{{x.name}}</td>
+<td>{{x.country}}</td>
+</tr>
+</table>
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.names = [
+        {name:'Jani', country:'US'},
+        {name:'Carl', country:'UK'},
+        {name:'Margareth', country:'IN'},
+        {name:'Hege', country:'ABC'},
+        {name:'Joe', country:'SRI'},
+        {name:'Gustav', country:'OPL'},
+        {name:'Birgit', country:'US'},
+        {name:'Mary', country:'UK'},
+        {name:'Kai', country:'ENG'}
+    ];
+});
+</script>
+
+<p>The list will only consists of names matching the filter.</p>
+
+
+</body>
+</html>

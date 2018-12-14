@@ -1,0 +1,68 @@
+AngularJS is a JavaScript framework. It is a library written in JavaScript.
+
+AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag:
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" />
+
+AngularJS extends HTML with ng-directives.
+
+The ng-app directive defines an AngularJS application.
+
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+
+The ng-bind directive binds application data to the HTML view. 
+
+The ng-app directive defines the application, the ng-controller directive defines the controller.
+
+Like JavaScript expressions, AngularJS expressions can contain literals, operators, and variables.
+
+Unlike JavaScript expressions, AngularJS expressions can be written inside HTML.
+
+AngularJS expressions do not support conditionals, loops, and exceptions, while JavaScript expressions do.
+
+AngularJS expressions support filters, while JavaScript expressions do not.
+
+#######################################################
+
+The ng-app directive defines the root element of an AngularJS application.
+
+The ng-init directive defines initial values for an AngularJS application.
+
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+
+The ng-controller directive defines the application controller.
+
+A controller is a JavaScript Object, created by a standard JavaScript object constructor.
+
+All applications have a $rootScope which is the scope created on the HTML element that contains the ng-app directive.
+
+In AngularJS, a service is a function, or object, that is available for, and limited to, your AngularJS application.
+
+$http is an AngularJS service for reading data from remote servers.
+
+JSON is a great way of transporting data, and it is easy to use within AngularJS, or any other JavaScript.
+
+You can add AngularJS event listeners to your HTML elements by using one or more of these directives:
+
+    ng-blur
+    ng-change
+    ng-click
+    ng-copy
+    ng-cut
+    ng-dblclick
+    ng-focus
+    ng-keydown
+    ng-keypress
+    ng-keyup
+    ng-mousedown
+    ng-mouseenter
+    ng-mouseleave
+    ng-mousemove
+    ng-mouseover
+    ng-mouseup
+    ng-paste
+
+
+
+
+

@@ -1,0 +1,88 @@
+MongoDB is an open-source document database and leading NoSQL database. MongoDB is written in C++. This tutorial will give you great understanding on MongoDB concepts needed to create and deploy a highly scalable and performance-oriented database.
+
+MongoDB is a document database in which one collection holds different documents. Number of fields, content and size of the document can differ from one document to another.
+
+Replication is the process of synchronizing data across multiple servers. Replication provides redundancy and increases data availability with multiple copies of data on different database servers.
+
+Datatypes :
+String, Integer, Boolean, Double, Min/Max Keys, Arrays, Timestamp, Object, Null, Symbol, Date, Object ID, Binary data, Code, Regular expression
+
+Commands :
+
+use mydb
+
+show dbs
+
+db.movie.insert({"name":"tutorials point"})
+
+db.dropDatabase()
+
+db.createCollection("mycol", { capped : true, autoIndexId : true, size : 
+   6142800, max : 10000 } )
+
+db.mycollection.drop()
+
+show collections
+
+db.post.insert([
+{
+      title: 'MongoDB Overview', 
+      description: 'MongoDB is no sql database',
+      by: 'tutorials point',
+      url: 'http://www.tutorialspoint.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 100
+   },
+   {
+      title: 'NoSQL Database', 
+      description: "NoSQL database doesn't have tables",
+      by: 'tutorials point',
+      url: 'http://www.tutorialspoint.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 20, 
+      comments: [	
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2013,11,10,2,35),
+            like: 0 
+         }
+      ]
+   }
+])
+
+db.myCollection.find()
+
+db.myCollection.find().pretty()
+
+db.movie.insert([{ name : 'Aman', val : 3}, {name : 'Singh', val : 4}])
+
+db.movie.aggregate([{$group : {_id : "$name", num_tutorial : {$sum : 1}}}])
+
+$sum, $avg, $min, $max, $push, $first, $last, $sort, $group, $skip, $limit
+
+
+
+
+
+
+db.myCollection.find({
+$or: [
+{"title":"MongoDB Overview"}, {"by","tutorials point"}
+]}
+).pretty()
+
+db.mycol.find({$or:[{"by":"tutorials point"},{"title": "MongoDB Overview"}]}).pretty()
+
+db.myCollection.update({'title':'New MongoDB Tutorial'},{$set:{'title':'LOL'}},{multi:true})
+
+db.mycol.remove()
+
+db.myCollection.find({},{KEY:1})
+
+db.myCollection.find({},{"title":1,_id:0})
+
+db.mycol.find({},{"title":1,_id:0}).limit(1).skip(1)
+
+db.myCollection.find({},{"title":1,_id:0}).sort({"title":-1})
+

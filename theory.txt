@@ -1,0 +1,72 @@
+Let’s start with the basics:
+JavaScript
+
+JavaScript is a programming language designed for use in a web browser. (It’s no longer a “scripting” language, nor does it have anything to do with Oracle’s “Java”, so the name is a bit misleading.)
+
+You can code in JavaScript – it’s a full-featured language which (with one notable exception) runs in a web browser like Chrome, Firefox, or Internet Explorer. It’s usual use is to manipulate a thing called the “Document Object Model”, essentially elements on a webpage.
+
+JavaScript executes on the client side: A website server sends the javascript to a user’s browser, and that browser interprets and runs the code. This happens inside a “sandbox”, which keeps the javascript from touching the internals of the system, which most of the time keeps malicious code from messing up the user’s computer.
+
+A simple JavaScript program is alert("hello world!");, which on an HTML page would probably be put inside a <script> tag to tell the user’s web browser to interpret the following as JavaScript, like: <script> alert("hello world!"); </script>. This code makes a small alert box pop up on the user’s browser. To see this code execute, click here.
+
+So, to recap: JavaScript is a programming language that operates in the browser, inside a security “sandbox”. It allows manipulation of elements on a webpage.
+AJAX
+
+AJAX stands for “Asynchronous JavaScript and XML“, and is a way that a webpage can use JavaScript to send and receive data from a server without refreshing a webpage. XML is a kind of markup language – like HTML, which people sometimes use for sending data across the internet. Recently, JSON (“JavaScript Object Notation”) is more popular and can be natively read by JavaScript. I know that’s a lot of 4-letter acronyms, so let’s recap:
+
+AJAX: Asynchronous JavaScript and XML. A system for sending and receiving data from a server without a page refresh. (example below)
+XML: eXtensible Markup Language. A language for organizing arbitrary data. Uses lots of angle brackets “<>”. (example)
+HTML: HyperText Markup Language. A subset of XML specifically for describing and organizing web pages. (example)
+JSON: JavaScript Object Notation. A more modern way of packaging data that’s often used with AJAX. Can be natively read by JavaScript. (example)
+
+A sample AJAX call might work like this:
+
+    Client requests page from server
+    Server responds to request and sends page
+    Client makes AJAX call to the server and requests more data
+    Server sends that data.
+    Client updates the page using that data without refreshing.
+
+Facebook, Gmail, and Pinterest are examples of sites that use a lot of AJAX.
+
+The “Asynchronous” part refers to the fact that when the JavaScript makes the AJAX call to the webserver, it continues to work until the response – it doesn’t “block” and stop while the data is being processed server-side.
+jQuery
+
+jQuery is a library built in JavaScript to automate and simplify common tasks. There are many libraries like it, but jQuery really took off because of its power and ability to make things work in older browsers. jQuery is used in the browser, alongside “normal” JavaScript. It is mainly used for animation and AJAX, which are difficult to do with vanilla JavaScript, but are just a few lines in jQuery.
+
+jQuery is included in a web page using the <script> tag; for example: <script src="./path/to/jquery.js"></script>. There are also myriad jQuery plugins, which extend the functionality of jQuery in various ways.
+
+A sample jQuery call, which hides a small box when clicked:
+
+Live Example:
+Click!
+
+
+<script src="path/to/jquery.js">
+<script>
+    $("#box").click(function(){$("#box").slideUp()});
+</script>
+
+AngularJS
+
+AngularJS is a full frontend MVC framework for JavaScript web applications. It was built at Google and provides a way to quickly build large, single-page web applications. Like jQuery, it is included into a page using the <script> tag, and is itself written in JavaScript. Unlike jQuery, it is meant to be a framework upon which an entire web application is built. It actually includes a minimal version of jQuery by default.
+
+If you’re looking to learn AngularJS, I recommend EggHead’s video tutorials. You’ll need to have a very solid understanding of JavaScript first, since writing any Angular requires a deep understanding of prototyping, scope, and various other JavaScript aspects.
+
+The AngularJS website has a page of example projects built with AngularJS, if you’re so inclined.
+Node.js
+
+Remember how I told you that JavaScript ran in the browser, but I mentioned that there was one big exception to that? Node.js is that exception. It’s a command-line tool that runs JavaScript on a machine without needing to run in a browser. It does this by using a version of Chrome’s V8 Engine, which is the JavaScript engine that runs inside Google Chrome.
+
+Before Node.js, developers would have to use different languages for the backend and frontend of their application. For example, PHP, Java, ASP.Net would run on the server, and JavaScript would run in the client browser. Now with Node.js, developers can use JavaScript on the server as well as the client, meaning that developers can focus on learning one language. Whether this is a good thing is still up for debate (nsfw language).
+Conclusion
+
+JavaScript is a language written for websites to run in the client’s browser.
+
+AJAX is a way for JavaScript to request data from a server without refreshing the page or blocking the application.
+
+jQuery is a JavaScript library built to automate and simplify common web tasks like AJAX or animation.
+
+Angular is a hip JavaScript framework which is made for building large, single-page web applications.
+
+Node.js allows JavaScript to be run without a browser, and is commonly used to run web servers.
