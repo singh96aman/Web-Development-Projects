@@ -1,0 +1,8 @@
+npm install -g angular-cli
+ng new angular2-fundamentals
+cd angular2-fundamentals
+ng serve
+
+ng generate component simple-form --inline-template --inline-style
+OR
+ng g c simple-form -it -is
